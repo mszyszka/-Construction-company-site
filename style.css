@@ -242,22 +242,45 @@ section.zaufali-nam {
 
 section.kontakt {
   display: grid;
-  grid-template-columns: [co-mozemy-col-start] auto [co-mozemy-col-end];
-  grid-template-rows: [co-mozemy-row-start co-mozemy-h1-start] auto [co-mozemy-h1-end] auto [co-mozemy-end];
-  grid-template-areas: "co-mozemy-lines" "co-mozemy-h1" "co-mozemy-ul"; }
+  grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
+  grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end kontakt-end];
+  grid-template-areas: "kontakt-lines" "kontakt-h1" "kontakt-p" "kontakt-form"; }
   section.kontakt .kontakt-lines {
-    grid-area: co-mozemy-lines;
-    grid-column-start: co-mozemy-col-start;
-    grid-column-end: co-mozemy-col-end;
-    grid-row-start: co-mozemy-row-start;
-    grid-row-end: co-mozemy-row-end; }
+    grid-area: kontakt-lines;
+    grid-column-start: kontakt-col-start;
+    grid-column-end: kontakt-col-end;
+    grid-row-start: kontakt-row-start;
+    grid-row-end: kontakt-row-end; }
   section.kontakt .kontakt-h1 {
-    grid-area: co-mozemy-h1;
+    grid-area: kontakt-h1;
     justify-self: center;
     margin-bottom: 60px;
     padding: 60px 20px 0 20px; }
   section.kontakt .kontakt-p {
+    grid-area: kontakt-p;
     padding: 0 20px;
     text-align: center; }
+  section.kontakt form {
+    grid-area: kontakt-form;
+    display: grid;
+    grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
+    grid-template-rows: [form-start label-imie-start] auto [label-imie-end input-imie-start] auto [input-imie-end label-email-start] auto [label-email-end input-email-start] auto [input-email-end label-tytul-start] auto [label-tytul-end input-tytul-start] auto [input-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end textarea-start] auto [textarea-end form-end];
+    grid-template-areas: "label-imie" "input-imie" "label-email" "input-email" "label-tytul" "input-tytul" "label-wiadomosc" "textarea"; }
+    section.kontakt form .label-imie {
+      grid-area: label-imie; }
+    section.kontakt form .input-imie {
+      grid-area: input-imie; }
+    section.kontakt form .label-email {
+      grid-area: label-email; }
+    section.kontakt form .input-email {
+      grid-area: input-email; }
+    section.kontakt form .label-tytul {
+      grid-area: label-tytul; }
+    section.kontakt form .input-tytul {
+      grid-area: input-tytul; }
+    section.kontakt form .label-wiadomosc {
+      grid-area: label-wiadomosc; }
+    section.kontakt form textarea {
+      grid-area: textarea; }
 
 /*# sourceMappingURL=style.css.map */
