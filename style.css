@@ -9,6 +9,10 @@ a {
   text-decoration: none;
   color: #000; }
 
+h1 {
+  font-size: 32px;
+  letter-spacing: 1px; }
+
 .kontakt-link-btn {
   position: fixed;
   bottom: 20px;
@@ -207,6 +211,8 @@ section.zaufali-nam {
   section.zaufali-nam .zaufali-nam-logo {
     text-align: center;
     margin-bottom: 40px; }
+    section.zaufali-nam .zaufali-nam-logo:last-of-type {
+      margin-bottom: 0; }
     section.zaufali-nam .zaufali-nam-logo img {
       width: 25%; }
   section.zaufali-nam .cocacola-logo {
@@ -233,5 +239,25 @@ section.zaufali-nam {
     grid-area: adidas-logo;
     justify-self: center;
     padding: 0 20px 0 20px; }
+
+section.kontakt {
+  display: grid;
+  grid-template-columns: [co-mozemy-col-start] auto [co-mozemy-col-end];
+  grid-template-rows: [co-mozemy-row-start co-mozemy-h1-start] auto [co-mozemy-h1-end] auto [co-mozemy-end];
+  grid-template-areas: "co-mozemy-lines" "co-mozemy-h1" "co-mozemy-ul"; }
+  section.kontakt .kontakt-lines {
+    grid-area: co-mozemy-lines;
+    grid-column-start: co-mozemy-col-start;
+    grid-column-end: co-mozemy-col-end;
+    grid-row-start: co-mozemy-row-start;
+    grid-row-end: co-mozemy-row-end; }
+  section.kontakt .kontakt-h1 {
+    grid-area: co-mozemy-h1;
+    justify-self: center;
+    margin-bottom: 60px;
+    padding: 60px 20px 0 20px; }
+  section.kontakt .kontakt-p {
+    padding: 0 20px;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
