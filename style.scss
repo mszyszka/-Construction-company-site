@@ -385,45 +385,66 @@ section.kontakt {
         grid-area: kontakt-p;
         padding: 0 20px;
         text-align: center;
+        margin-bottom: 60px;
         
     }
     form {
+        padding: 0 20px;
         grid-area: kontakt-form;
         display: grid;
         grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
-        grid-template-rows: [form-start label-imie-start] auto [label-imie-end input-imie-start] auto [input-imie-end label-email-start] auto [label-email-end input-email-start] auto [input-email-end label-tytul-start] auto [label-tytul-end input-tytul-start] auto [input-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end textarea-start] auto [textarea-end form-end];
+        grid-template-rows: [form-start label-imie-start] auto [label-imie-end label-email-start] auto  [label-email-end label-tytul-start] auto  [label-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end status-start] auto [status-end submit-start] auto [submit-end form-end];
         grid-template-areas: 
         "label-imie"
-        "input-imie"
         "label-email"
-        "input-email"
         "label-tytul"
-        "input-tytul"
         "label-wiadomosc"
-        "textarea";
+        "status"
+        "submit";
+        label {
+            margin-bottom: 15px;
+            input {
+                text-indent: 5px;
+            }
+        }
         .label-imie {
             grid-area: label-imie;
+            display: flex;
+            flex-direction: column;
         }
         .input-imie {
             grid-area: input-imie;
         }
         .label-email {
             grid-area: label-email;
+            display: flex;
+            flex-direction: column;
         }
         .input-email {
             grid-area: input-email;
         }
         .label-tytul {
             grid-area: label-tytul;
+            display: flex;
+            flex-direction: column;
         }
         .input-tytul {
             grid-area: input-tytul;
         }
         .label-wiadomosc {
             grid-area: label-wiadomosc;
+            display: flex;
+            flex-direction: column;
         }
         textarea {
             grid-area: textarea;
+            text-indent: 5px;
+        }
+        .status {
+            grid-area: status;
+        }
+        button {
+            grid-area: submit;
         }
     }
 }
