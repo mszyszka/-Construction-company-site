@@ -2,8 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Lato', sans-serif;
     color: #000;
+
 }
 
 a {
@@ -14,6 +15,18 @@ a {
 h1 {
     font-size: 32px;
     letter-spacing: 1px;
+}
+
+.logo {
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: 700;
+    
+    span {
+        letter-spacing: 3px;
+        margin-left: 3px;
+        font-weight: 400;
+    }
 }
 
 .kontakt-link-btn {
@@ -144,13 +157,7 @@ h1 {
     "logo"
     "text";
     .logo {
-        text-transform: uppercase;
-        padding: 20px;
-        
-        span {
-            letter-spacing: 3px;
-            margin-left: 3px;
-        }
+        grid-area: logo;
     }
     section.text {
         grid-area: text;
@@ -160,6 +167,7 @@ h1 {
     
     .header-h1 {
         font-size: 72px;
+        line-height: 1.1;
         text-transform: uppercase;
         margin-bottom: 10px;
     }
@@ -236,6 +244,7 @@ section.co-mozemy {
         justify-self: center;
         margin-bottom: 60px;
         padding: 60px 20px 0 20px;
+        text-align: center;
     }
 
 
@@ -305,7 +314,7 @@ section.zaufali-nam {
 
     .zaufali-nam-logo {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         &:last-of-type{
             // margin-bottom: 0;
         }
@@ -358,12 +367,14 @@ section.kontakt {
     background: #a6c0db;
     display: grid;
     grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
-    grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end kontakt-end];
+    grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-end];
     grid-template-areas: 
     "kontakt-lines"
     "kontakt-h1"
     "kontakt-p"
-    "kontakt-form";
+    "kontakt-form"
+    "adres"
+    "mapa";
     // padding: 60px 20px 60px 20px;
 
     .kontakt-lines {
@@ -390,7 +401,9 @@ section.kontakt {
         
     }
     form {
+        max-width: 600px;
         padding: 0 20px;
+        margin-bottom: 60px;
         grid-area: kontakt-form;
         display: grid;
         grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
@@ -402,11 +415,14 @@ section.kontakt {
         "label-wiadomosc"
         "status"
         "submit";
+        .placeholder-color::placeholder {
+            color: #DF2800;
+        }
         label {
             margin-bottom: 15px;
             input {
                 text-indent: 5px;
-                width: 60%;
+                width: 70%;
                 padding: 3px 0;
                 border: none;
                 margin-top: 5px;
@@ -457,9 +473,8 @@ section.kontakt {
         }
         .submit {
             grid-area: submit;
-            align-self: center;
+            width: 200px;
             margin-top: 15px;
-            justify-self: center;
             padding: 10px 20px;
             background: none;
             border: 2px solid #000;
@@ -470,5 +485,21 @@ section.kontakt {
                 color: #fff;
             }
         }
+    }
+    .adres {
+        grid-area: adres;
+        padding: 0 20px;
+        margin-bottom: 15px;
+        .logo {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .mapa {
+        padding: 0 20px;
+        grid-area: mapa;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 200px;
     }
 }

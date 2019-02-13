@@ -18,35 +18,33 @@ $(document).ready(function() {
         statusEl.empty()
 
         if(imie.length > 2) {
-            readyToSend++;
         } else {
             //To prevent sending form every time if something is invalid
             event.preventDefault()
             $(".input-imie").attr("placeholder", "Wpisz imię").val("").focus().blur();
+            $(".input-imie").addClass('placeholder-color');
         }
 
         if(email.length > 5 && email.includes('@') && email.includes('.')) {
-            readyToSend++;
         } else {
             event.preventDefault()
-            $(".input-email").attr("placeholder", "Wpisz email(np. michal@gmail.com)").val("").focus().blur();
+            $(".input-email").attr("placeholder", "Wpisz email(np. michal@gmail.com)").val("").focus().blur().css('color', 'red');
+            $(".input-email").addClass('placeholder-color');
         }
 
         if(tytul.length >= 2) {
-            readyToSend++;
         } else {
             event.preventDefault()
             $(".input-tytul").attr("placeholder", "Wpisz tytul(np. Współpraca)").val("").focus().blur();
+            $(".input-tytul").addClass('placeholder-color');
         }
 
         if(textareaWiadomosc.length > 15) {
-            readyToSend++;
-            if(readyToSend == 4) {
-                $('.statusEl').html('Wiadomość gotowa do wysłania')
-            }
+            
         } else {
             event.preventDefault()
             $(".textarea-wiadomosc").attr("placeholder", "Wpisz swoją wiadomość").val("").focus().blur();
+            $(".textarea-wiadomosc").addClass('placeholder-color');
         }
 
 

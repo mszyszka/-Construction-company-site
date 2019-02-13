@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Staatliches', cursive;
+  font-family: 'Lato', sans-serif;
   color: #000; }
 
 a {
@@ -12,6 +12,15 @@ a {
 h1 {
   font-size: 32px;
   letter-spacing: 1px; }
+
+.logo {
+  text-transform: uppercase;
+  padding: 20px;
+  font-weight: 700; }
+  .logo span {
+    letter-spacing: 3px;
+    margin-left: 3px;
+    font-weight: 400; }
 
 .kontakt-link-btn {
   position: fixed;
@@ -104,16 +113,13 @@ h1 {
   grid-template-rows: [header-row-start logo-start] auto [logo-end] auto [text-end header-row-end];
   grid-template-areas: "logo" "text"; }
   .site-header .logo {
-    text-transform: uppercase;
-    padding: 20px; }
-    .site-header .logo span {
-      letter-spacing: 3px;
-      margin-left: 3px; }
+    grid-area: logo; }
   .site-header section.text {
     grid-area: text;
     padding: 20px 20px 60px 20px; }
   .site-header .header-h1 {
     font-size: 72px;
+    line-height: 1.1;
     text-transform: uppercase;
     margin-bottom: 10px; }
   .site-header p {
@@ -165,7 +171,8 @@ section.co-mozemy {
     grid-area: co-mozemy-h1;
     justify-self: center;
     margin-bottom: 60px;
-    padding: 60px 20px 0 20px; }
+    padding: 60px 20px 0 20px;
+    text-align: center; }
   section.co-mozemy .co-mozemy-ul {
     grid-area: co-mozemy-ul;
     background-image: url("/line.svg");
@@ -210,7 +217,7 @@ section.zaufali-nam {
     margin-bottom: 60px; }
   section.zaufali-nam .zaufali-nam-logo {
     text-align: center;
-    margin-bottom: 40px; }
+    margin-bottom: 60px; }
     section.zaufali-nam .zaufali-nam-logo img {
       width: 25%; }
   section.zaufali-nam .cocacola-logo {
@@ -242,8 +249,8 @@ section.kontakt {
   background: #a6c0db;
   display: grid;
   grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
-  grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end kontakt-end];
-  grid-template-areas: "kontakt-lines" "kontakt-h1" "kontakt-p" "kontakt-form"; }
+  grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-end];
+  grid-template-areas: "kontakt-lines" "kontakt-h1" "kontakt-p" "kontakt-form" "adres" "mapa"; }
   section.kontakt .kontakt-lines {
     grid-area: kontakt-lines;
     grid-column-start: kontakt-col-start;
@@ -261,17 +268,21 @@ section.kontakt {
     text-align: center;
     margin-bottom: 60px; }
   section.kontakt form {
+    max-width: 600px;
     padding: 0 20px;
+    margin-bottom: 60px;
     grid-area: kontakt-form;
     display: grid;
     grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
     grid-template-rows: [form-start label-imie-start] auto [label-imie-end label-email-start] auto [label-email-end label-tytul-start] auto [label-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end status-start] auto [status-end submit-start] auto [submit-end form-end];
     grid-template-areas: "label-imie" "label-email" "label-tytul" "label-wiadomosc" "status" "submit"; }
+    section.kontakt form .placeholder-color::placeholder {
+      color: #DF2800; }
     section.kontakt form label {
       margin-bottom: 15px; }
       section.kontakt form label input {
         text-indent: 5px;
-        width: 60%;
+        width: 70%;
         padding: 3px 0;
         border: none;
         margin-top: 5px;
@@ -311,9 +322,8 @@ section.kontakt {
       grid-area: status; }
     section.kontakt form .submit {
       grid-area: submit;
-      align-self: center;
+      width: 200px;
       margin-top: 15px;
-      justify-self: center;
       padding: 10px 20px;
       background: none;
       border: 2px solid #000;
@@ -322,5 +332,18 @@ section.kontakt {
       section.kontakt form .submit:hover {
         background: #000;
         color: #fff; }
+  section.kontakt .adres {
+    grid-area: adres;
+    padding: 0 20px;
+    margin-bottom: 15px; }
+    section.kontakt .adres .logo {
+      margin: 0;
+      padding: 0; }
+  section.kontakt .mapa {
+    padding: 0 20px;
+    grid-area: mapa;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 200px; }
 
 /*# sourceMappingURL=style.css.map */
