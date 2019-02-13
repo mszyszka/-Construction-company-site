@@ -211,8 +211,6 @@ section.zaufali-nam {
   section.zaufali-nam .zaufali-nam-logo {
     text-align: center;
     margin-bottom: 40px; }
-    section.zaufali-nam .zaufali-nam-logo:last-of-type {
-      margin-bottom: 0; }
     section.zaufali-nam .zaufali-nam-logo img {
       width: 25%; }
   section.zaufali-nam .cocacola-logo {
@@ -241,6 +239,7 @@ section.zaufali-nam {
     padding: 0 20px 0 20px; }
 
 section.kontakt {
+  background: #a6c0db;
   display: grid;
   grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
   grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end kontakt-end];
@@ -271,7 +270,12 @@ section.kontakt {
     section.kontakt form label {
       margin-bottom: 15px; }
       section.kontakt form label input {
-        text-indent: 5px; }
+        text-indent: 5px;
+        width: 60%;
+        padding: 3px 0;
+        border: none;
+        margin-top: 5px;
+        border-radius: 1px; }
     section.kontakt form .label-imie {
       grid-area: label-imie;
       display: flex;
@@ -293,13 +297,30 @@ section.kontakt {
     section.kontakt form .label-wiadomosc {
       grid-area: label-wiadomosc;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-bottom: 0; }
     section.kontakt form textarea {
       grid-area: textarea;
-      text-indent: 5px; }
+      text-indent: 5px;
+      padding: 3px 0;
+      border: none;
+      margin-top: 5px;
+      min-height: 100px;
+      border-radius: 1px; }
     section.kontakt form .status {
       grid-area: status; }
-    section.kontakt form button {
-      grid-area: submit; }
+    section.kontakt form .submit {
+      grid-area: submit;
+      align-self: center;
+      margin-top: 15px;
+      justify-self: center;
+      padding: 10px 20px;
+      background: none;
+      border: 2px solid #000;
+      outline: none;
+      transition-duration: 0.4s; }
+      section.kontakt form .submit:hover {
+        background: #000;
+        color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
