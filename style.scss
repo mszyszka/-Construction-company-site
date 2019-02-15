@@ -149,30 +149,38 @@ h1 {
     display: grid;
     background-image: url('img/header.jpg');
     color: #fff;
-    background-size: cover;
+    background-size: auto;
+    background-position-y: -358px;
+    background-position-x: -394px;
     background-repeat: no-repeat;
-    grid-template-columns: [header-col-start] auto [header-col-end];
-    grid-template-rows:[header-row-start logo-start] auto [logo-end] auto [text-end header-row-end];
+    grid-template-columns: [header-col-start first-col-start] 1fr [first-col-end second-col-start] 1fr [second-col-end third-col-start] 1fr [third-col-end fourth-col-start] 1fr [fourth-col-end header-col-end];
+    grid-template-rows:[header-row-start logo-start] auto [logo-row-end h1-row-start] auto [h1-row-end p-row-start] auto [p-row-end header-row-end];
     grid-template-areas: 
-    "logo"
-    "text";
+    "logo logo . ."
+    "h1 h1 h1 ."
+    "p p p p";
     .logo {
         grid-area: logo;
     }
-    section.text {
-        grid-area: text;
-        padding: 20px 20px 60px 20px;
-    }
+    // section.text {
+    //     padding: 20px 20px 60px 20px;
+    //     grid-area: txt;
+    // }
     
     
     .header-h1 {
-        font-size: 72px;
+        font-size: 54px;
         line-height: 1.1;
         text-transform: uppercase;
         margin-bottom: 10px;
+        grid-area: h1;
+        padding: 20px 20px 0 20px;
     }
     p {
         text-transform: none;
+        grid-area: p;
+        padding: 0 20px 60px 20px;
+        max-width: 500px;
     }
 }
 //////////////////////////////////section.o-nas////////////////////////////////////
@@ -427,6 +435,11 @@ section.kontakt {
                 border: none;
                 margin-top: 5px;
                 border-radius: 1px;
+                outline: none;
+                filter: brightness(97%);
+                &:hover,:focus,:active {
+                filter: brightness(100%);
+                }
             }
         }
         .label-imie {
@@ -467,6 +480,11 @@ section.kontakt {
             margin-top: 5px;
             min-height: 100px;
             border-radius: 1px;
+            outline: none;
+            filter: brightness(97%);
+            &:hover,:focus,:active {
+                filter: brightness(100%);
+                }
         }
         .status {
             grid-area: status;
@@ -474,7 +492,7 @@ section.kontakt {
         .submit {
             grid-area: submit;
             width: 200px;
-            margin-top: 15px;
+            margin-top: 20px;
             padding: 10px 20px;
             background: none;
             border: 2px solid #000;
@@ -500,6 +518,49 @@ section.kontakt {
         grid-area: mapa;
         width: 100%;
         height: 300px;
-        margin-bottom: 200px;
+        margin-bottom: 60px;
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: [footer-col-start] auto [footer-col-end];
+    grid-template-rows: [nav-start] auto [nav-end];
+    grid-template-areas: 
+    "nav-ul";
+    ul.nav-ul {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 60px;
+        grid-area: nav-ul;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        grid-template-areas: 
+        "li-0"
+        "li-1"
+        "li-2"
+        "li-3";
+        list-style-type: none;
+        padding: 0 20px 51px 20px;
+        li {
+            padding: 10px 0;
+            a {
+                padding: 10px 50px;
+            }
+        }
+        
+        .li-0 {
+            grid-area: li-0;
+        }
+        .li-1 {
+            grid-area: li-1;
+        }
+        .li-2 {
+            grid-area: li-2;
+        }
+        .li-3 {
+            grid-area: li-3;
+        }
     }
 }
