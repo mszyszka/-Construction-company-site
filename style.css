@@ -442,7 +442,9 @@ footer {
     margin-bottom: 100px; }
   section.kontakt form {
     padding: 0 40px;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    min-width: 500px;
+    justify-self: center; }
   section.kontakt .adres {
     padding: 0 40px; }
   section.kontakt .mapa {
@@ -454,5 +456,32 @@ footer {
     margin-bottom: 40px; }
   footer ul.nav-ul {
     margin: 100px 0 91px 0; } }
+@media (min-width: 900px) {
+  .site-header {
+    background-position-y: -277px; }
+    .site-header .logo {
+      grid-area: logo;
+      position: fixed;
+      top: 0;
+      left: 0; }
+
+  .top-nav {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "nav-ul"; }
+    .top-nav .hamburger {
+      display: none; }
+    .top-nav ul.nav-ul {
+      box-shadow: none;
+      display: grid !important;
+      padding: 0;
+      grid-template-columns: auto 160px 160px 160px 160px;
+      grid-template-rows: 60px;
+      align-items: center;
+      grid-template-areas: ". li-0 li-1 li-2 li-3"; }
+      .top-nav ul.nav-ul li {
+        padding: 10px 0; }
+        .top-nav ul.nav-ul li a {
+          padding: 10px 0; } }
 
 /*# sourceMappingURL=style.css.map */

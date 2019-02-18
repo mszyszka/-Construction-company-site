@@ -4,6 +4,20 @@ $('.hamburger').on('click', function(){
     $('.top-nav').toggleClass('nav-open')
 });
 
+$(document).scroll(function(){
+    let topNavPosition = $(".top-nav").position();
+    let header = $(".site-header").position();
+
+    if(header.top < 0) {
+        alert('mam pozycje');
+        $(".top-nav").css('background', '#e8ecf7');
+        $(".nav-ul").css('-webkit-box-shadow', '0px 10px 5px -5px rgba(51,51,51,0.35)');
+        $(".nav-ul").css('-moz-box-shadow', '0px 10px 5px -5px rgba(51,51,51,0.35)');
+        $(".nav-ul").css('box-shadow', '0px 10px 5px -5px rgba(51,51,51,0.35)');
+
+    }
+});
+
 $(document).ready(function() {
     $('.submit').click(function(event) {
         console.log('Clicked button')
