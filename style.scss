@@ -89,6 +89,7 @@ h1 {
 ///////////////////////////////////////top-nav//////////////////////////////////////
 
 .top-nav {
+    z-index: 100;
     display: none;
     position: fixed;
     top: 0;
@@ -211,6 +212,7 @@ section.o-nas {
     .o-nas-p {
         grid-area: o-nas-p;
         padding: 0 20px 60px 20px;
+        text-align: center;
     }
 
     .o-nas-kontakt-btn {
@@ -283,7 +285,6 @@ section.co-mozemy {
 }
 
 /////////////////////////zaufali nam//////////////////////////////////////////
-//////////////////////////////////section.o-nas////////////////////////////////////
 section.zaufali-nam {
     display: grid;
     grid-template-columns: [zaufali-nam-col-start] auto [zaufali-nam-col-end];
@@ -301,10 +302,10 @@ section.zaufali-nam {
     
     .zaufali-nam-lines {
         grid-area: zaufali-nam-lines;
-        grid-column-start: o-nas-col-start;
-        grid-column-end: o-nas-col-end;
-        grid-row-start: o-nas-row-start;
-        grid-row-end: o-nas-row-end;
+        grid-column-start: zaufali-nam-col-start;
+        grid-column-end: zaufali-nam-col-end;
+        grid-row-start: zaufali-nam-row-start;
+        grid-row-end: zaufali-nam-row-end;
     }
 
     .zaufali-nam-h1 {
@@ -327,7 +328,7 @@ section.zaufali-nam {
             // margin-bottom: 0;
         }
         img {
-            width: 25%;
+            width: 20%;
         }
     }
     .cocacola-logo {
@@ -409,7 +410,6 @@ section.kontakt {
         
     }
     form {
-        max-width: 600px;
         padding: 0 20px;
         margin-bottom: 60px;
         grid-area: kontakt-form;
@@ -428,10 +428,11 @@ section.kontakt {
         }
         label {
             margin-bottom: 15px;
+
             input {
                 text-indent: 5px;
-                width: 70%;
-                padding: 3px 0;
+                width: 60%;
+                padding: 5px 0;
                 border: none;
                 margin-top: 5px;
                 border-radius: 1px;
@@ -637,9 +638,9 @@ footer {
             margin-bottom: 100px;
         }
         form {
-            padding: 0 40px;
+            padding: 0;
             margin-bottom: 100px;
-            min-width: 500px;
+            min-width: 80%;
             justify-self: center;
         }
         .adres {
@@ -673,6 +674,7 @@ footer {
         h1 {
             margin-top: 141px!important;
         }
+       
     }
     .top-nav {
         background: #fff;
@@ -685,16 +687,16 @@ footer {
         }
         ul.nav-ul {
             display: grid!important;
-            padding: 0;
+            padding: 0 40px 0 0;
             grid-template-columns: 250px  auto 42px 154px 73px 59px;
             grid-template-rows: 60px;
+            grid-column-gap: 20px;
             align-items: center;
             justify-items: right;
             grid-template-areas:
             "logo . li-0 li-1 li-2 li-3";
             li {
                 padding: 10px 0;
-                border: 1px solid red;
                 text-align: right;
                 a {
                     padding: 10px 0;
@@ -702,10 +704,42 @@ footer {
             }
         }   
     }
+    .o-nas {
+        .o-nas-p {
+            padding: 0 120px!important;
+        }
+    }
+    .co-mozemy {
+        .co-mozemy-ul {
+            padding: 0 120px!important;
+        }
+    }
+    section.zaufali-nam {
+        display: grid;
+        grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end];
+        grid-template-rows: [zaufali-nam-row-start]auto auto auto auto auto auto[zaufali-nam-row-end];
+        grid-template-areas: 
+        "zaufali-nam-lines zaufali-nam-lines"
+        "zaufali-nam-h1 zaufali-nam-h1"
+        "zaufali-nam-p zaufali-nam-p"
+        "cocacola-logo facebook-logo"
+        "apple-logo beats-logo"
+        "nike-logo adidas-logo";
+        .logo {
+            margin: 0;
+        }
+    }
 }
 
 @media(min-width: 1200px){
-    
+    section.kontakt {
+        form {
+            label {
+            }
+            button {
+            }
+        }
+    }
 }
 
 @media(min-width: 1800px){

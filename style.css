@@ -65,6 +65,7 @@ h1 {
     max-width: 500px; }
 
 .top-nav {
+  z-index: 100;
   display: none;
   position: fixed;
   top: 0;
@@ -146,7 +147,8 @@ section.o-nas {
     padding: 0; }
   section.o-nas .o-nas-p {
     grid-area: o-nas-p;
-    padding: 0 20px 60px 20px; }
+    padding: 0 20px 60px 20px;
+    text-align: center; }
   section.o-nas .o-nas-kontakt-btn {
     grid-area: o-nas-kontakt-btn;
     justify-self: center;
@@ -204,10 +206,10 @@ section.zaufali-nam {
   grid-template-areas: "zaufali-nam-lines" "zaufali-nam-h1" "zaufali-nam-p" "cocacola-logo" "facebook-logo" "apple-logo" "beats-logo" "nike-logo" "adidas-logo"; }
   section.zaufali-nam .zaufali-nam-lines {
     grid-area: zaufali-nam-lines;
-    grid-column-start: o-nas-col-start;
-    grid-column-end: o-nas-col-end;
-    grid-row-start: o-nas-row-start;
-    grid-row-end: o-nas-row-end; }
+    grid-column-start: zaufali-nam-col-start;
+    grid-column-end: zaufali-nam-col-end;
+    grid-row-start: zaufali-nam-row-start;
+    grid-row-end: zaufali-nam-row-end; }
   section.zaufali-nam .zaufali-nam-h1 {
     grid-area: zaufali-nam-h1;
     justify-self: center;
@@ -222,7 +224,7 @@ section.zaufali-nam {
     text-align: center;
     margin-bottom: 60px; }
     section.zaufali-nam .zaufali-nam-logo img {
-      width: 25%; }
+      width: 20%; }
   section.zaufali-nam .cocacola-logo {
     grid-area: cocacola-logo;
     justify-self: center;
@@ -271,7 +273,6 @@ section.kontakt {
     text-align: center;
     margin-bottom: 60px; }
   section.kontakt form {
-    max-width: 600px;
     padding: 0 20px;
     margin-bottom: 60px;
     grid-area: kontakt-form;
@@ -285,8 +286,8 @@ section.kontakt {
       margin-bottom: 15px; }
       section.kontakt form label input {
         text-indent: 5px;
-        width: 70%;
-        padding: 3px 0;
+        width: 60%;
+        padding: 5px 0;
         border: none;
         margin-top: 5px;
         border-radius: 1px;
@@ -437,9 +438,9 @@ footer {
   section.kontakt .kontakt-p {
     margin-bottom: 100px; }
   section.kontakt form {
-    padding: 0 40px;
+    padding: 0;
     margin-bottom: 100px;
-    min-width: 500px;
+    min-width: 80%;
     justify-self: center; }
   section.kontakt .adres {
     padding: 0 40px; }
@@ -472,17 +473,31 @@ footer {
       display: none; }
     .top-nav ul.nav-ul {
       display: grid !important;
-      padding: 0;
+      padding: 0 40px 0 0;
       grid-template-columns: 250px  auto 42px 154px 73px 59px;
       grid-template-rows: 60px;
+      grid-column-gap: 20px;
       align-items: center;
       justify-items: right;
       grid-template-areas: "logo . li-0 li-1 li-2 li-3"; }
       .top-nav ul.nav-ul li {
         padding: 10px 0;
-        border: 1px solid red;
         text-align: right; }
         .top-nav ul.nav-ul li a {
-          padding: 10px 0; } }
+          padding: 10px 0; }
+
+  .o-nas .o-nas-p {
+    padding: 0 120px !important; }
+
+  .co-mozemy .co-mozemy-ul {
+    padding: 0 120px !important; }
+
+  section.zaufali-nam {
+    display: grid;
+    grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end];
+    grid-template-rows: [zaufali-nam-row-start] auto auto auto auto auto auto [zaufali-nam-row-end];
+    grid-template-areas: "zaufali-nam-lines zaufali-nam-lines" "zaufali-nam-h1 zaufali-nam-h1" "zaufali-nam-p zaufali-nam-p" "cocacola-logo facebook-logo" "apple-logo beats-logo" "nike-logo adidas-logo"; }
+    section.zaufali-nam .logo {
+      margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
