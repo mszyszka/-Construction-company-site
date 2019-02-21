@@ -11,7 +11,8 @@ a {
 
 h1 {
   font-size: 32px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  text-transform: uppercase; }
 
 .logo {
   text-transform: uppercase;
@@ -243,7 +244,7 @@ section.zaufali-nam {
 
 section.kontakt {
   padding-bottom: 120px;
-  background: #a6c0db;
+  background: #c0d2e694;
   display: grid;
   grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
   grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-end];
@@ -264,53 +265,53 @@ section.kontakt {
     padding: 0 20px;
     text-align: center;
     margin-bottom: 60px; }
-  section.kontakt form {
+  section.kontakt .kontakt-form {
     padding: 0 20px;
     margin-bottom: 60px;
     grid-area: kontakt-form;
     display: grid;
-    grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
-    grid-template-rows: [form-start label-imie-start] auto [label-imie-end label-email-start] auto [label-email-end label-tytul-start] auto [label-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end status-start] auto [status-end submit-start] auto [submit-end form-end];
-    grid-template-areas: "label-imie" "label-email" "label-tytul" "label-wiadomosc" "status" "submit"; }
-    section.kontakt form .placeholder-color::placeholder {
+    grid-column-gap: 10px;
+    grid-template-columns: [form-col-start first-col-start] 1fr [first-col-end sec-col-start] 1fr [sec-col-end form-col-end];
+    grid-template-rows: [form-row-start first-row-start] auto [first-row-end sec-row-start] auto [sec-row-end third-row-start] auto [third-row-end fourth-row-start] auto [fourth-row-end form-row-end];
+    grid-template-areas: "label-imie label-email" "label-tytul label-tytul" "label-wiadomosc label-wiadomosc" "submit submit"; }
+    section.kontakt .kontakt-form .placeholder-color::placeholder {
       color: #DF2800; }
-    section.kontakt form label {
+    section.kontakt .kontakt-form label {
       margin-bottom: 15px; }
-      section.kontakt form label input {
+      section.kontakt .kontakt-form label input {
         text-indent: 10px;
-        width: 60%;
         padding: 10px 0;
         border: none;
         margin-top: 5px;
         border-radius: 3px;
         outline: none;
         filter: brightness(97%); }
-        section.kontakt form label input:hover, section.kontakt form label input:focus, section.kontakt form label input:active {
+        section.kontakt .kontakt-form label input:hover, section.kontakt .kontakt-form label input:focus, section.kontakt .kontakt-form label input:active {
           filter: brightness(100%); }
-    section.kontakt form .label-imie {
+    section.kontakt .kontakt-form .label-imie {
       grid-area: label-imie;
       display: flex;
       flex-direction: column; }
-    section.kontakt form .input-imie {
+    section.kontakt .kontakt-form .input-imie {
       grid-area: input-imie; }
-    section.kontakt form .label-email {
+    section.kontakt .kontakt-form .label-email {
       grid-area: label-email;
       display: flex;
       flex-direction: column; }
-    section.kontakt form .input-email {
+    section.kontakt .kontakt-form .input-email {
       grid-area: input-email; }
-    section.kontakt form .label-tytul {
+    section.kontakt .kontakt-form .label-tytul {
       grid-area: label-tytul;
       display: flex;
       flex-direction: column; }
-    section.kontakt form .input-tytul {
+    section.kontakt .kontakt-form .input-tytul {
       grid-area: input-tytul; }
-    section.kontakt form .label-wiadomosc {
+    section.kontakt .kontakt-form .label-wiadomosc {
       grid-area: label-wiadomosc;
       display: flex;
       flex-direction: column;
       margin-bottom: 0; }
-    section.kontakt form textarea {
+    section.kontakt .kontakt-form textarea {
       grid-area: textarea;
       text-indent: 10px;
       padding: 10px 0;
@@ -320,11 +321,11 @@ section.kontakt {
       border-radius: 3px;
       outline: none;
       filter: brightness(97%); }
-      section.kontakt form textarea:hover, section.kontakt form textarea :focus, section.kontakt form textarea :active {
+      section.kontakt .kontakt-form textarea:hover, section.kontakt .kontakt-form textarea :focus, section.kontakt .kontakt-form textarea :active {
         filter: brightness(100%); }
-    section.kontakt form .status {
+    section.kontakt .kontakt-form .status {
       grid-area: status; }
-    section.kontakt form .submit {
+    section.kontakt .kontakt-form .submit {
       grid-area: submit;
       width: 200px;
       margin-top: 20px;
@@ -333,7 +334,7 @@ section.kontakt {
       border: 2px solid #000;
       outline: none;
       transition-duration: 0.4s; }
-      section.kontakt form .submit:hover {
+      section.kontakt .kontakt-form .submit:hover {
         background: #000;
         color: #fff; }
   section.kontakt .adres {
@@ -415,7 +416,7 @@ footer {
 
   section.kontakt .kontakt-p {
     margin-bottom: 100px; }
-  section.kontakt form {
+  section.kontakt .kontakt-form {
     padding: 0;
     margin-bottom: 100px;
     min-width: 80%;
@@ -528,6 +529,12 @@ footer {
       text-align: left;
       font-size: 20px;
       position: relative;
-      top: -21px; } }
+      top: -21px; }
+
+  section.kontakt .kontakt-form {
+    min-width: 0;
+    width: 1000px !important; }
+  section.kontakt .mapa {
+    height: 500px !important; } }
 
 /*# sourceMappingURL=style.css.map */

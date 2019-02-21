@@ -16,6 +16,7 @@ a {
 h1 {
     font-size: 32px;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -353,7 +354,7 @@ section.zaufali-nam {
 /////////////////////////////section.kontakt///////////////////////////////////////
 section.kontakt {
     padding-bottom: 120px;
-    background: #a6c0db;
+    background: #c0d2e694;
     display: grid;
     grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
     grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-end];
@@ -389,20 +390,28 @@ section.kontakt {
         margin-bottom: 60px;
         
     }
-    form {
+    .kontakt-form {
         padding: 0 20px;
         margin-bottom: 60px;
         grid-area: kontakt-form;
         display: grid;
-        grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
-        grid-template-rows: [form-start label-imie-start] auto [label-imie-end label-email-start] auto  [label-email-end label-tytul-start] auto  [label-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end status-start] auto [status-end submit-start] auto [submit-end form-end];
+        // grid-template-columns: [kontakt-form-start] auto [kontakt-form-end];
+        // grid-template-rows: [form-start label-imie-start] auto [label-imie-end label-email-start] auto  [label-email-end label-tytul-start] auto  [label-tytul-end label-wiadomosc-start] auto [label-wiadomosc-end status-start] auto [status-end submit-start] auto [submit-end form-end];
+        // grid-template-areas: 
+        // "label-imie"
+        // "label-email"
+        // "label-tytul"
+        // "label-wiadomosc"
+        // "status"
+        // "submit";
+        grid-column-gap: 10px;
+        grid-template-columns: [form-col-start first-col-start] 1fr [first-col-end sec-col-start] 1fr [sec-col-end form-col-end];
+        grid-template-rows: [form-row-start first-row-start] auto [first-row-end sec-row-start] auto [sec-row-end third-row-start] auto [third-row-end fourth-row-start] auto [fourth-row-end form-row-end];
         grid-template-areas: 
-        "label-imie"
-        "label-email"
-        "label-tytul"
-        "label-wiadomosc"
-        "status"
-        "submit";
+        "label-imie label-email"
+        "label-tytul label-tytul"
+        "label-wiadomosc label-wiadomosc"
+        "submit submit";
         .placeholder-color::placeholder {
             color: #DF2800;
         }
@@ -411,7 +420,7 @@ section.kontakt {
 
             input {
                 text-indent: 10px;
-                width: 60%;
+                // width: 60%;
                 padding: 10px 0;
                 border: none;
                 margin-top: 5px;
@@ -598,7 +607,7 @@ footer {
         .kontakt-p {
             margin-bottom: 100px;
         }
-        form {
+        .kontakt-form {
             padding: 0;
             margin-bottom: 100px;
             min-width: 80%;
@@ -761,6 +770,15 @@ footer {
             font-size: 20px;
             position: relative;
             top: -21px;
+        }
+    }
+    section.kontakt {
+        .kontakt-form {
+            min-width: 0;
+            width: 1000px!important;
+        }
+        .mapa {
+            height: 500px!important;
         }
     }
 }
