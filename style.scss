@@ -1,3 +1,4 @@
+// Formularz kontaktowy > 1200px 
 * {
     padding: 0;
     margin: 0;
@@ -55,19 +56,18 @@ h1 {
 .site-header {
     display: grid;
     background-image: url('img/header.jpg');
+    background-size: auto;
     color: #fff;
     background-size: auto;
     background-position-y: -358px;
     background-position-x: -394px;
     background-repeat: no-repeat;
-    grid-template-columns: [header-col-start first-col-start] 1fr [first-col-end second-col-start] 1fr [second-col-end third-col-start] 1fr [third-col-end fourth-col-start] 1fr [fourth-col-end header-col-end];
+    grid-template-columns: [header-col-start ] auto [ header-col-end];
     grid-template-rows:[header-row-start top-nav-row-start] auto [top-nav-row-end h1-row-start] auto [h1-row-end p-row-start] auto [p-row-end header-row-end];
     grid-template-areas: 
-    "top-nav top-nav top-nav top-nav"
-    "h1 h1 h1 ."
-    "p p p p";
-
-    
+    "top-nav"
+    "h1"
+    "p";
     .header-h1 {
         font-size: 54px;
         line-height: 1.1;
@@ -75,7 +75,7 @@ h1 {
         margin-bottom: 10px;
         grid-area: h1;
         margin-top: 81px;
-        padding: 0 20px;
+        padding: 0 20% 0 20px;
     }
     p {
         text-transform: none;
@@ -206,7 +206,7 @@ section.o-nas {
     .o-nas-h1 {
         grid-area: o-nas-h1;
         justify-self: center;
-        margin: 60px 0;
+        margin: 120px 0 60px 0;
         padding: 0;
     }
     .o-nas-p {
@@ -252,7 +252,7 @@ section.co-mozemy {
     .co-mozemy-h1 {
         grid-area: co-mozemy-h1;
         justify-self: center;
-        margin: 60px 0 60px 0;
+        margin: 120px 0 60px 0;
         padding: 0 20px;
         text-align: center;
     }
@@ -286,6 +286,7 @@ section.co-mozemy {
 
 /////////////////////////zaufali nam//////////////////////////////////////////
 section.zaufali-nam {
+    margin-bottom: 120px;
     display: grid;
     grid-template-columns: [zaufali-nam-col-start] auto [zaufali-nam-col-end];
     grid-template-rows: [zaufali-nam-row-start ] auto [zaufali-nam-h1-start] auto [zaufali-nam-h1-end zaufali-nam-p-start] auto [zaufali-nam-p-end cocacola-logo-start] auto [cocacola-logo-end facebook-logo-start] auto [facebook-logo-end apple-logo-start] auto [apple-logo-end beats-logo-start] auto [beats-logo-end nike-logo-start] auto [nike-logo-end adidas-logo-start] auto [adidas-logo-end zaufali-nam-row-end];
@@ -311,7 +312,7 @@ section.zaufali-nam {
     .zaufali-nam-h1 {
         grid-area: zaufali-nam-h1;
         justify-self: center;
-        margin: 60px 0 60px 0;
+        margin: 120px 0 60px 0;
         padding:0 20px;
     }
     .zaufali-nam-p {
@@ -324,53 +325,34 @@ section.zaufali-nam {
     .zaufali-nam-logo {
         text-align: center;
         margin-bottom: 60px;
-
         img {
             width: 120px;
         }
     }
     .cocacola-logo {
         grid-area: cocacola-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
-
     }
     .facebook-logo {
         grid-area: facebook-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
     }
     .apple-logo {
         grid-area: apple-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
     }
     .beats-logo {
         grid-area: beats-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
     }
     .nike-logo {
         grid-area: nike-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
     }
     .adidas-logo {
         grid-area: adidas-logo;
-        justify-self: center;
-        padding: 0 20px 0 20px;
-
+        margin-bottom: 0;
     }
-
 }
 
 /////////////////////////////section.kontakt///////////////////////////////////////
 section.kontakt {
+    padding-bottom: 120px;
     background: #a6c0db;
     display: grid;
     grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
@@ -395,7 +377,7 @@ section.kontakt {
     .kontakt-h1 {
         grid-area: kontakt-h1;
         justify-self: center;
-        margin: 60px 0 30px 0;
+        margin: 120px 0 30px 0;
         padding: 0 20px;
     }
 
@@ -517,7 +499,6 @@ section.kontakt {
         grid-area: mapa;
         width: 100%;
         height: 300px;
-        margin-bottom: 70px;
     }
 }
 
@@ -530,7 +511,7 @@ footer {
     ul.nav-ul {
         text-align: center;
         padding: 0 20px;
-        margin: 60px 0 51px 0;
+        margin: 120px 0 111px 0;
         grid-area: nav-ul;
         grid-template-columns: auto;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -570,20 +551,13 @@ footer {
         }
     }
     .site-header {
-        background-size: auto;
         background-position-y: -358px;
         background-position-x: -394px;
-        grid-template-columns: [header-col-start first-col-start] 1fr [first-col-end second-col-start] 1fr [second-col-end third-col-start] 1fr [third-col-end fourth-col-start] 1fr [fourth-col-end header-col-end];
-        grid-template-rows:[header-row-start logo-start] auto [logo-row-end h1-row-start] auto [h1-row-end p-row-start] auto [p-row-end header-row-end];
-        grid-template-areas: 
-        "logo logo . ."
-        "h1 h1 h1 h1"
-        "p p p p";
         .logo {
             padding: 0 40px;
         }
         .header-h1 {
-            margin-top: 60px;
+            margin-top: 120px;
             margin-bottom: 10px;
             padding: 0 20px;
             text-align: center;
@@ -595,43 +569,32 @@ footer {
             }
         }
         p {
-            font-weight: 700;
+            // font-weight: 700;
             padding: 0 20px;
-            margin-bottom: 100px;
+            margin-bottom: 140px;
             text-align: center;
             justify-self: center;
         }
     }
     section.o-nas {
-        h1.o-nas-h1 {
-            margin: 100px 0 40px 0;
-            padding: 0;
-        }
-        p.o-nas-p {
+        .o-nas-p {
             padding: 0 40px;
             margin-bottom: 40px;
         }
     }
     section.co-mozemy {
-        .co-mozemy-h1 {
-            margin: 100px 0 40px 0;
-        }
         .co-mozemy-ul {
             padding: 0 40px;
         }
     }
     section.zaufali-nam {
-        .zaufali-nam-h1 {
-            margin: 100px 0 40px 0;
-        }
-        .zaufali-nam-logo:last-of-type{
+        .zaufali-nam-p {
+            padding: 0 40px;
             margin-bottom: 100px;
         }
     }
     section.kontakt {
-        .kontakt-h1{
-            margin: 100px 0 40px 0;
-        }
+
         .kontakt-p {
             margin-bottom: 100px;
         }
@@ -662,6 +625,7 @@ footer {
 
 @media(min-width: 900px){
     .site-header {
+        height: 533px;
         background-position-y: -277px;
         .logo {
             grid-area: logo;
@@ -718,18 +682,18 @@ footer {
             margin: 200px 0 100px 0!important;
         }
     }
-    section.zaufali-nam {
+    .zaufali-nam {
         margin-bottom: 100px;
-        display: grid;
-        grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end];
-        grid-template-rows: [zaufali-nam-row-start]auto auto auto auto auto auto[zaufali-nam-row-end];
+        display: grid!important;
+        grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end]!important;
+        grid-template-rows: [zaufali-nam-row-start]auto auto auto auto auto auto[zaufali-nam-row-end]!important;
         grid-template-areas: 
         "zaufali-nam-lines zaufali-nam-lines"
         "zaufali-nam-h1 zaufali-nam-h1"
         "zaufali-nam-p zaufali-nam-p"
         "cocacola-logo facebook-logo"
         "apple-logo beats-logo"
-        "nike-logo adidas-logo";
+        "nike-logo adidas-logo"!important;
         .logo-left-col{
             justify-content: center;
             display: grid;
@@ -755,7 +719,7 @@ footer {
         .zaufali-nam-logo {
             align-items: center;
             justify-items: center;
-            margin: 0 0 100px 0;
+            margin: 0 0 100px 0!important;
 
         }
         .zaufali-nam-h1 {
@@ -763,18 +727,40 @@ footer {
         }
         .zaufali-nam-p {
             padding: 0 120px!important;
-            margin-bottom: 120px;
+            margin-bottom: 120px!important;
+        }
+    }
+    .kontakt {
+        .kontakt-h1 {
+            margin: 200px 0 40px 0!important;
         }
     }
 }
 
 @media(min-width: 1200px){
-    section.kontakt {
-        form {
-            label {
-            }
-            button {
-            }
+    .site-header {
+        height: 533px;
+        grid-template-rows:[header-row-start top-nav-row-start] 60px [top-nav-row-end txt-row-start] auto [txt-row-end header-row-end];
+        grid-template-areas: 
+        "top-nav top-nav"
+        "h1 p";
+        .header-h1 {
+            margin:0!important;
+            padding: 0;
+            align-self: center;
+            justify-self: right;
+
+        }
+        .site-header-p {
+            margin: 0;
+            align-self: center;
+            padding: 0;
+            justify-self: left;
+            max-width: 303px;
+            text-align: left;
+            font-size: 20px;
+            position: relative;
+            top: -21px;
         }
     }
 }
