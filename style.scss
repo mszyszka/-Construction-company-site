@@ -659,13 +659,13 @@ footer {
         ul.nav-ul {
             display: grid!important;
             padding: 0 40px 0 0;
-            grid-template-columns: 250px  auto 42px 154px 73px 59px;
+            grid-template-columns: auto 42px 154px 73px 59px;
             grid-template-rows: 60px;
             grid-column-gap: 20px;
             align-items: center;
             justify-items: right;
             grid-template-areas:
-            "logo . li-0 li-1 li-2 li-3";
+            ". li-0 li-1 li-2 li-3";
             li {
                 padding: 10px 0;
                 text-align: right;
@@ -748,7 +748,9 @@ footer {
 
 @media(min-width: 1200px){
     .site-header {
-        height: 533px;
+        height: 650px;
+        background-position: center;
+        background-position-y: -290px;
         grid-template-rows:[header-row-start top-nav-row-start] 60px [top-nav-row-end txt-row-start] auto [txt-row-end header-row-end];
         grid-template-areas: 
         "top-nav top-nav"
@@ -781,8 +783,20 @@ footer {
             height: 500px!important;
         }
     }
+    .top-nav {
+        grid-template-rows: 74px auto;
+        .logo {
+            font-size: 20px;
+            margin: 25px 0;
+        }
+        ul.nav-ul {
+            font-size: 18px;
+            grid-template-columns: auto 45px 171px 79px 64px;
+            grid-template-rows: 74px;
+        }
+    }
 }
 
 @media(min-width: 1800px){
-    
+
 }
