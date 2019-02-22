@@ -1,9 +1,10 @@
+//operating on nav
 $('.hamburger').on('click', function(){
     $('.hamburger').toggleClass('change')
     $('.nav-ul').toggleClass('open')
     $('.top-nav').toggleClass('nav-open')
 });
-
+//form validation
 $(document).ready(function() {
     $('.submit').click(function(event) {
         console.log('Clicked button')
@@ -13,7 +14,6 @@ $(document).ready(function() {
         let tytul = $('.input-tytul').val()
         let textareaWiadomosc = $('.textarea-wiadomosc').val()
         let statusEl = $('.status')
-        let readyToSend = 0;
         
         statusEl.empty()
 
@@ -46,8 +46,22 @@ $(document).ready(function() {
             $(".textarea-wiadomosc").attr("placeholder", "Wpisz swoją wiadomość").val("").focus().blur();
             $(".textarea-wiadomosc").addClass('placeholder-color');
         }
-
-
     })
-
 })
+//scrollTo
+$(".a-o-nas").click(function(){
+    $.scrollTo($('.o-nas'), 500);
+});
+
+$(".a-co-zrobimy").click(function(){
+    $.scrollTo($('.co-mozemy'), 500);
+});
+$(".a-realizacje").click(function(){
+    $.scrollTo($('.zaufali-nam'), 500);
+});
+$(".a-kontakt").click(function(){
+    $.scrollTo($('.kontakt'), 500);
+});
+$(".logo").click(function(){
+    $.scrollTo(0, 500);
+});
