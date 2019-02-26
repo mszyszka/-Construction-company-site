@@ -24,13 +24,14 @@ h1 {
     margin-left: 3px;
     font-weight: 400; }
 
-.kontakt-link-btn {
+.phone-icon-kontakt-btn {
+  cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
   font-size: 28px;
   transition: all ease-in-out 0.4s; }
-  .kontakt-link-btn:hover {
+  .phone-icon-kontakt-btn:hover {
     font-size: 34px; }
 
 .open {
@@ -122,6 +123,8 @@ h1 {
       padding: 10px 0; }
       .top-nav ul.nav-ul li a {
         padding: 10px 50px; }
+      .top-nav ul.nav-ul li:hover {
+        font-weight: 700; }
     .top-nav ul.nav-ul .li-0 {
       grid-area: li-0; }
     .top-nav ul.nav-ul .li-1 {
@@ -361,6 +364,8 @@ footer {
       padding: 10px 0; }
       footer ul.nav-ul li a {
         padding: 10px 50px; }
+      footer ul.nav-ul li:hover {
+        font-weight: 700; }
     footer ul.nav-ul .li-0 {
       grid-area: li-0; }
     footer ul.nav-ul .li-1 {
@@ -420,11 +425,19 @@ footer {
     margin-bottom: 110px; }
 
   footer .logo {
+    cursor: pointer;
     padding: 0 40px;
     margin-bottom: 40px; }
   footer ul.nav-ul {
     margin: 100px 0 91px 0; } }
 @media (min-width: 900px) {
+  .phone-icon-kontakt-btn {
+    bottom: 40px;
+    right: 40px;
+    font-size: 32px; }
+    .phone-icon-kontakt-btn:hover {
+      font-size: 38px; }
+
   .site-header {
     height: 533px;
     background-position-y: -277px; }
@@ -474,27 +487,16 @@ footer {
     margin-bottom: 100px;
     display: grid !important;
     grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end] !important;
-    grid-template-rows: [zaufali-nam-row-start] auto auto auto auto auto auto [zaufali-nam-row-end] !important;
+    grid-template-rows: [zaufali-nam-row-start] auto auto auto auto auto [zaufali-nam-row-end] !important;
+    grid-column-gap: 200px;
     grid-template-areas: "zaufali-nam-h1 zaufali-nam-h1" "zaufali-nam-p zaufali-nam-p" "cocacola-logo facebook-logo" "apple-logo beats-logo" "nike-logo adidas-logo" !important; }
     .zaufali-nam .logo-left-col {
-      justify-content: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas: '. . img-left .'; }
-      .zaufali-nam .logo-left-col .img-left-col {
-        grid-area: img-left; }
+      justify-items: right; }
     .zaufali-nam .logo-right-col {
-      justify-content: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas: '. img-right . .'; }
-      .zaufali-nam .logo-right-col .img-right-col {
-        grid-area: img-right; }
+      justify-items: left; }
     .zaufali-nam .zaufali-nam-logo {
+      display: grid;
       align-items: center;
-      justify-items: center;
       margin: 0 0 100px 0 !important; }
     .zaufali-nam .zaufali-nam-h1 {
       margin: 200px 0 40px 0 !important; }
@@ -530,12 +532,18 @@ footer {
   section.kontakt .kontakt-form {
     min-width: 0;
     width: 1000px !important; }
+  section.kontakt .adres {
+    width: 90%;
+    margin: 0 auto 15px auto; }
   section.kontakt .mapa {
+    width: 90%;
+    margin: 0 auto 110px auto;
     height: 500px !important; }
 
   .top-nav {
     grid-template-rows: 74px auto; }
     .top-nav .logo {
+      cursor: pointer;
       font-size: 20px;
       margin: 25px 0; }
     .top-nav ul.nav-ul {
@@ -543,6 +551,13 @@ footer {
       grid-template-columns: auto 45px 171px 79px 64px;
       grid-template-rows: 74px; } }
 @media (min-width: 1800px) {
+  .phone-icon-kontakt-btn {
+    bottom: 80px;
+    right: 80px;
+    font-size: 38px; }
+    .phone-icon-kontakt-btn:hover {
+      font-size: 46px; }
+
   section.o-nas .o-nas-p {
     display: block;
     max-width: 1400px !important;

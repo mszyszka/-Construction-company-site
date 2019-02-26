@@ -65,3 +65,10 @@ $(".a-kontakt").click(function(){
 $(".logo").click(function(){
     $.scrollTo(0, 500);
 });
+$(".phone-icon-kontakt-btn").click(function(){
+    $.scrollTo($('.kontakt'), 500);
+});
+$(".o-nas-kontakt-btn").click(function(){
+    $.scrollTo($('.kontakt'), 500);
+});
+

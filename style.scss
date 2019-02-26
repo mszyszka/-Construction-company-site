@@ -31,7 +31,8 @@ h1 {
     }
 }
 
-.kontakt-link-btn {
+.phone-icon-kontakt-btn {
+    cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -41,8 +42,6 @@ h1 {
         font-size: 34px;
     }
 }
-
-
 
 .open {
     display: grid!important;
@@ -166,6 +165,9 @@ h1 {
             padding: 10px 0;
             a {
                 padding: 10px 50px;
+            }
+            &:hover {
+                font-weight: 700;
             }
         }
         
@@ -558,6 +560,9 @@ footer {
             a {
                 padding: 10px 50px;
             }
+            &:hover {
+                font-weight: 700;
+            }
         }
         
         .li-0 {
@@ -645,6 +650,7 @@ footer {
     }
     footer {
         .logo {
+            cursor: pointer;
             padding: 0 40px;
             margin-bottom: 40px;
         }
@@ -655,6 +661,14 @@ footer {
 }
 
 @media(min-width: 900px){
+    .phone-icon-kontakt-btn {
+        bottom: 40px;
+        right: 40px;
+        font-size: 32px;
+        &:hover {
+            font-size: 38px;
+        }
+    }
     .site-header {
         height: 533px;
         background-position-y: -277px;
@@ -719,39 +733,25 @@ footer {
         margin-bottom: 100px;
         display: grid!important;
         grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end]!important;
-        grid-template-rows: [zaufali-nam-row-start]auto auto auto auto auto auto[zaufali-nam-row-end]!important;
+        grid-template-rows: [zaufali-nam-row-start] auto auto auto auto auto[zaufali-nam-row-end]!important;
+        grid-column-gap: 200px;
         grid-template-areas: 
-        // "zaufali-nam-lines zaufali-nam-lines"
         "zaufali-nam-h1 zaufali-nam-h1"
         "zaufali-nam-p zaufali-nam-p"
         "cocacola-logo facebook-logo"
         "apple-logo beats-logo"
         "nike-logo adidas-logo"!important;
         .logo-left-col{
-            justify-content: center;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: 
-            '. . img-left .';
-            .img-left-col{
-                grid-area: img-left;
-            }
+            justify-items: right;
+
         }
         .logo-right-col{
-            justify-content: center;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: 
-            '. img-right . .';
-            .img-right-col{
-                grid-area: img-right;
-            }
+            justify-items: left;
+
         }
         .zaufali-nam-logo {
+            display: grid;
             align-items: center;
-            justify-items: center;
             margin: 0 0 100px 0!important;
 
         }
@@ -803,13 +803,20 @@ footer {
             min-width: 0;
             width: 1000px!important;
         }
+        .adres {
+            width: 90%;
+            margin: 0 auto 15px auto;
+        }
         .mapa {
+            width: 90%;
+            margin: 0 auto 110px auto;
             height: 500px!important;
         }
     }
     .top-nav {
         grid-template-rows: 74px auto;
         .logo {
+            cursor: pointer;
             font-size: 20px;
             margin: 25px 0;
         }
@@ -822,6 +829,14 @@ footer {
 }
 
 @media(min-width: 1800px){
+    .phone-icon-kontakt-btn {
+        bottom: 80px;
+        right: 80px;
+        font-size: 38px;
+        &:hover {
+            font-size: 46px;
+        }
+    }
     section.o-nas {
         .o-nas-p {
             display: block;
