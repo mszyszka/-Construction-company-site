@@ -131,17 +131,24 @@ h1 {
     .top-nav ul.nav-ul .li-3 {
       grid-area: li-3; }
 
+.main-content {
+  display: grid;
+  grid-template-columns: [main-col-start] auto [main-col-end];
+  grid-template-rows: [main-row-start] auto auto auto auto [main-row-end];
+  grid-template-areas: "main-lines" "section-o-nas" "section-co-mozemy" "section-zaufali-nam"; }
+  .main-content .main-lines {
+    grid-area: main-lines;
+    grid-column-start: main-col-start;
+    grid-column-end: main-col-end;
+    grid-row-start: main-row-start;
+    grid-row-end: main-row-end; }
+
 section.o-nas {
+  grid-area: section-o-nas;
   display: grid;
   grid-template-columns: [o-nas-col-start] auto [o-nas-col-end];
-  grid-template-rows: [o-nas-row-start] auto [o-nas-h1-start] auto [o-nas-h1-end o-nas-p-start] auto [o-nas-p-end o-nas-kontakt-btn-start] auto [o-nas-kontakt-btn-end o-nas-row-end];
-  grid-template-areas: "o-nas-lines" "o-nas-h1" "o-nas-p" "o-nas-kontakt-btn"; }
-  section.o-nas .o-nas-lines {
-    grid-area: o-nas-lines;
-    grid-column-start: o-nas-col-start;
-    grid-column-end: o-nas-col-end;
-    grid-row-start: o-nas-row-start;
-    grid-row-end: o-nas-row-end; }
+  grid-template-rows: [o-nas-row-start o-nas-h1-start] auto [o-nas-h1-end o-nas-p-start] auto [o-nas-p-end o-nas-kontakt-btn-start] auto [o-nas-kontakt-btn-end o-nas-row-end];
+  grid-template-areas: "o-nas-h1" "o-nas-p" "o-nas-kontakt-btn"; }
   section.o-nas .o-nas-h1 {
     grid-area: o-nas-h1;
     justify-self: center;
@@ -164,16 +171,11 @@ section.o-nas {
       color: #fff; }
 
 section.co-mozemy {
+  grid-area: section-co-mozemy;
   display: grid;
   grid-template-columns: [co-mozemy-col-start] auto [co-mozemy-col-end];
-  grid-template-rows: [co-mozemy-row-start co-mozemy-h1-start] auto [co-mozemy-h1-end] auto [co-mozemy-end];
-  grid-template-areas: "co-mozemy-lines" "co-mozemy-h1" "co-mozemy-ul"; }
-  section.co-mozemy .co-mozemy-lines {
-    grid-area: co-mozemy-lines;
-    grid-column-start: co-mozemy-col-start;
-    grid-column-end: co-mozemy-col-end;
-    grid-row-start: co-mozemy-row-start;
-    grid-row-end: co-mozemy-row-end; }
+  grid-template-rows: [co-mozemy-row-start co-mozemy-h1-start] auto [co-mozemy-h1-end co-mozemy-ul-start] auto [co-mozemy-ul-end co-mozemy-row-end];
+  grid-template-areas: "co-mozemy-h1" "co-mozemy-ul"; }
   section.co-mozemy .co-mozemy-h1 {
     grid-area: co-mozemy-h1;
     justify-self: center;
@@ -202,17 +204,12 @@ section.co-mozemy {
         margin: 0 auto 20px auto; }
 
 section.zaufali-nam {
+  grid-area: section-zaufali-nam;
   margin-bottom: 120px;
   display: grid;
   grid-template-columns: [zaufali-nam-col-start] auto [zaufali-nam-col-end];
-  grid-template-rows: [zaufali-nam-row-start] auto [zaufali-nam-h1-start] auto [zaufali-nam-h1-end zaufali-nam-p-start] auto [zaufali-nam-p-end cocacola-logo-start] auto [cocacola-logo-end facebook-logo-start] auto [facebook-logo-end apple-logo-start] auto [apple-logo-end beats-logo-start] auto [beats-logo-end nike-logo-start] auto [nike-logo-end adidas-logo-start] auto [adidas-logo-end zaufali-nam-row-end];
-  grid-template-areas: "zaufali-nam-lines" "zaufali-nam-h1" "zaufali-nam-p" "cocacola-logo" "facebook-logo" "apple-logo" "beats-logo" "nike-logo" "adidas-logo"; }
-  section.zaufali-nam .zaufali-nam-lines {
-    grid-area: zaufali-nam-lines;
-    grid-column-start: zaufali-nam-col-start;
-    grid-column-end: zaufali-nam-col-end;
-    grid-row-start: zaufali-nam-row-start;
-    grid-row-end: zaufali-nam-row-end; }
+  grid-template-rows: [zaufali-nam-row-start zaufali-nam-h1-start] auto [zaufali-nam-h1-end zaufali-nam-p-start] auto [zaufali-nam-p-end cocacola-logo-start] auto [cocacola-logo-end facebook-logo-start] auto [facebook-logo-end apple-logo-start] auto [apple-logo-end beats-logo-start] auto [beats-logo-end nike-logo-start] auto [nike-logo-end adidas-logo-start] auto [adidas-logo-end zaufali-nam-row-end];
+  grid-template-areas: "zaufali-nam-h1" "zaufali-nam-p" "cocacola-logo" "facebook-logo" "apple-logo" "beats-logo" "nike-logo" "adidas-logo"; }
   section.zaufali-nam .zaufali-nam-h1 {
     grid-area: zaufali-nam-h1;
     justify-self: center;
@@ -243,18 +240,13 @@ section.zaufali-nam {
     margin-bottom: 0; }
 
 section.kontakt {
+  grid-area: section-kontakt;
   padding-bottom: 120px;
   background: #c0d2e694;
   display: grid;
   grid-template-columns: [kontakt-col-start] auto [kontakt-col-end];
-  grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-end];
-  grid-template-areas: "kontakt-lines" "kontakt-h1" "kontakt-p" "kontakt-form" "adres" "mapa"; }
-  section.kontakt .kontakt-lines {
-    grid-area: kontakt-lines;
-    grid-column-start: kontakt-col-start;
-    grid-column-end: kontakt-col-end;
-    grid-row-start: kontakt-row-start;
-    grid-row-end: kontakt-row-end; }
+  grid-template-rows: [kontakt-row-start kontakt-h1-start] auto [kontakt-h1-end kontakt-p-start] auto [kontakt-p-end kontakt-form-start] auto [kontakt-form-end adres-start] auto [adres-end mapa-start] auto [mapa-end kontakt-row-end];
+  grid-template-areas: "kontakt-h1" "kontakt-p" "kontakt-form" "adres" "mapa"; }
   section.kontakt .kontakt-h1 {
     grid-area: kontakt-h1;
     justify-self: center;
@@ -467,7 +459,9 @@ footer {
           padding: 10px 0; }
 
   .o-nas .o-nas-p {
-    padding: 0 120px !important; }
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto 40px auto; }
   .o-nas .o-nas-h1 {
     margin: 200px 0 100px 0 !important; }
 
@@ -481,7 +475,7 @@ footer {
     display: grid !important;
     grid-template-columns: [zaufali-nam-col-start] 1fr 1fr [zaufali-nam-col-end] !important;
     grid-template-rows: [zaufali-nam-row-start] auto auto auto auto auto auto [zaufali-nam-row-end] !important;
-    grid-template-areas: "zaufali-nam-lines zaufali-nam-lines" "zaufali-nam-h1 zaufali-nam-h1" "zaufali-nam-p zaufali-nam-p" "cocacola-logo facebook-logo" "apple-logo beats-logo" "nike-logo adidas-logo" !important; }
+    grid-template-areas: "zaufali-nam-h1 zaufali-nam-h1" "zaufali-nam-p zaufali-nam-p" "cocacola-logo facebook-logo" "apple-logo beats-logo" "nike-logo adidas-logo" !important; }
     .zaufali-nam .logo-left-col {
       justify-content: center;
       display: grid;
@@ -548,5 +542,10 @@ footer {
       font-size: 18px;
       grid-template-columns: auto 45px 171px 79px 64px;
       grid-template-rows: 74px; } }
+@media (min-width: 1800px) {
+  section.o-nas .o-nas-p {
+    display: block;
+    max-width: 1400px !important;
+    margin: 0 auto 40px auto; } }
 
 /*# sourceMappingURL=style.css.map */
